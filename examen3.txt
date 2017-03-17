@@ -1,0 +1,58 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+  int  filas2, columnas2, filas1, columnas1, i;
+  int f,c,h,j,total=0;;
+  
+  int A[4][2];
+  int B[2][4];
+  int C[2][2];
+  
+  printf("Ingrese las filas y las columnas de la matriz A\n");
+  scanf("%d %d",&filas1, &columnas1);
+  
+  printf("Ingrese las filas y las columnas de la matriz B\n");
+  scanf("%d %d",&filas1, &columnas2);
+  
+  for (f=0; f<filas1; f++){
+      
+      for(c=0; c<columnas1; c++){
+          
+          printf("Ingrese valor en la posicion [%d][%d]\n",f,c);
+          scanf("%d", & A[f][c]);
+      }
+  }
+   for (f=0; f<filas2; f++){
+      
+      for(c=0; c<columnas2; c++){
+          
+          printf("Ingrese valor en la posicion [%d][%d]\n",f,c);
+          scanf("%d", & B[f][c]);
+      }
+  }
+    for (i=0; i<filas1; i++){
+      
+      for(h=0; h<columnas2; h++){
+          
+          for (total=0; total<columnas1; total++){
+              C[i][j] = C[i][h]+A[i][total]*B[total][h];
+          }
+          
+              
+      }
+  }
+  
+  
+  for(i=0; i<filas1; i++){
+      for(h=0; h<columnas2; h++){
+           printf("la matriz total es\n");
+  printf("%d  ",C[i][h]);
+      }
+       printf("\n ");
+  }
+  return 0;
+  
+}
